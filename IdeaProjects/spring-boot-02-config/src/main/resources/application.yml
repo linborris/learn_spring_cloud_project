@@ -1,0 +1,20 @@
+server:
+    port: 8081
+person:
+    name: linzhixiangyml
+    age: 27
+    boss: false
+    birthday: 1993/06/05
+    maps: {k1: 1,k2: v22}
+#    lists:
+#      - dog
+#      - cat
+#      - mouse
+    lists: dog,cat,mouse
+    dog:
+      name: lucky
+      age: 2
+---
+server:
+  servlet:
+    context-path: /myhello
