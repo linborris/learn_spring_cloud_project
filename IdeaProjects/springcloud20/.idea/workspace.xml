@@ -158,7 +158,8 @@
     <option name="skipTests" value="true" />
   </component>
   <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="-7" />
+    <option name="x" value="-127" />
+    <option name="y" value="441" />
     <option name="width" value="1922" />
     <option name="height" value="1047" />
   </component>
@@ -371,6 +372,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49814814" visible="true" weight="0.29051173" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
