@@ -17,6 +17,10 @@
     </properties>
 
     <dependencies>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-netflix-eureka-client</artifactId>
+        </dependency>
         <!--项目实体类的jar包-->
         <dependency>
             <groupId>com.atguigu.springcloud</groupId>
