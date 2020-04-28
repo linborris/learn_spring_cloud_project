@@ -23,7 +23,6 @@ import java.util.List;
 public class PaymentController {
     @Resource
     PaymentService paymentService;
-
     @Value("${server.port}")
     private String serverPort;
     @Resource
@@ -41,7 +40,6 @@ public class PaymentController {
         }
 
     }
-    
     @GetMapping(value = "/payment/get/{id}")
     public CommonResult<Payment> getPaymentById(@PathVariable("id") Long id)
     {
@@ -52,9 +50,8 @@ public class PaymentController {
         }else {
             return new CommonResult(444,"没有对应记录，查询id："+id+"server port："+serverPort,null);
         }
-
     }
-    
+
     @GetMapping("/payment/discovery")
     public Object discovery(){
         List<String> services = discoveryClient.getServices();
