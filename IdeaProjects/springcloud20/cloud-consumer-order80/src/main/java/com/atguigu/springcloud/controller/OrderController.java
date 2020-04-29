@@ -34,4 +34,9 @@ public class OrderController {
         log.info("开始根据id获取payment对象");
         return restTemplate.getForObject(PAYMENT_URL+"/payment/get/"+id,CommonResult.class);
     }
+    @GetMapping("/consumer/payment/discovery")
+    public CommonResult discovery(){
+        log.info("开始获取注册发现");
+        return restTemplate.getForObject(PAYMENT_URL+"/payment/discovery",CommonResult.class);
+    }
 }

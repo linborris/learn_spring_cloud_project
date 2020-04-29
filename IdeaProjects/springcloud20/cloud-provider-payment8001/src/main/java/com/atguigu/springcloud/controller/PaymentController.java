@@ -56,7 +56,7 @@ public class PaymentController {
     }
     
     @GetMapping("/payment/discovery")
-    public Object discovery(){
+    public CommonResult<Object> discovery(){
         List<String> services = discoveryClient.getServices();
         for (String element:services) {
             log.info("******"+element+"******");
@@ -65,6 +65,6 @@ public class PaymentController {
         for (ServiceInstance instance:instances) {
             log.info(instance.getInstanceId()+"\t"+instance.getServiceId()+"\t"+instance.getHost()+"\t"+instance.getPort()+"\t"+instance.getUri());
         }
-        return discoveryClient;
+        return new CommonResult(200,"服务注册发现成功，server port："+serverPort,discoveryClient);
     }
 }
