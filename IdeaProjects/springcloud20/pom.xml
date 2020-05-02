@@ -89,6 +89,7 @@
                 <configuration>
                     <fork>true</fork>
                     <addResources>true</addResources>
+                    <includeSystemScope>true</includeSystemScope>
                 </configuration>
             </plugin>
         </plugins>
