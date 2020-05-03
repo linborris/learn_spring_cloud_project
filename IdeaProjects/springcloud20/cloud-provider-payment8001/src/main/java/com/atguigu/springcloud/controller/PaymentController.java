@@ -52,7 +52,6 @@ public class PaymentController {
         }else {
             return new CommonResult(444,"没有对应记录，查询id："+id+"server port："+serverPort,null);
         }
-
     }
     
     @GetMapping("/payment/discovery")
@@ -66,5 +65,10 @@ public class PaymentController {
             log.info(instance.getInstanceId()+"\t"+instance.getServiceId()+"\t"+instance.getHost()+"\t"+instance.getPort()+"\t"+instance.getUri());
         }
         return new CommonResult(200,"服务注册发现成功，server port："+serverPort,discoveryClient);
+    }
+
+    @GetMapping("/payment/lb")
+    public String getPaymentLB(){
+        return serverPort;
     }
 }

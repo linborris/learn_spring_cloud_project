@@ -1,9 +1,9 @@
 server:
-  port: 8006
+  port: 80
 
 spring:
   application:
-    name: consul-provider-payment
+    name: consul-consumer-order
   cloud:
     consul:
 #      host: 49.233.204.165
@@ -11,7 +11,7 @@ spring:
       port: 8500
       discovery:
         service-name: ${spring.application.name}
-#        health-check-url: http://112.48.59.10:8006/actuator/health
+        #        health-check-url: http://112.48.59.10:8006/actuator/health
         # springboot2.0+加入下面配置
         # springboot2.0+health路径如下
         health-check-path: /actuator/health

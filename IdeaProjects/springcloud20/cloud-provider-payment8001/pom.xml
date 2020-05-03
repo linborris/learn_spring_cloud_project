@@ -21,6 +21,11 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
+        <!--<dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-ribbon</artifactId>
+            <version>2.2.1.RELEASE</version>
+        </dependency>-->
         <!--项目实体类的jar包-->
         <dependency>
             <groupId>com.atguigu.springcloud</groupId>

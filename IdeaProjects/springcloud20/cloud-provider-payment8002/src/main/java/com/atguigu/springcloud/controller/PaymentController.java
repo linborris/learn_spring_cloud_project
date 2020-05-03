@@ -64,4 +64,9 @@ public class PaymentController {
         }
         return new CommonResult(200,"服务注册发现成功，server port："+serverPort,discoveryClient);
     }
+
+    @GetMapping("/payment/lb")
+    public String getPaymentLB(){
+        return serverPort;
+    }
 }
