@@ -59,4 +59,15 @@ public class PaymentService {
     public String paymentCircuitBreaker_FallBack(Integer id){
         return "id不能为负数，请稍后再试\t o(╥﹏╥)o" +id;
     }
+
+    @HystrixCommand(fallbackMethod = "paymentCircuitBreaker_FallBack",commandProperties = {
+            @HystrixProperty(name="execution.isolation.strategy",value="true"),//
+            @HystrixProperty(name="execution.isolation.thread.timeoutInMilliseconds",value="10"),//
+            @HystrixProperty(name="execution.timeout.enabled",value="10000"),//
+            @HystrixProperty(name="execution.isolation.thread.interruptOnTimeout",value="60"),//
+            @HystrixProperty(name="",value=""),//
+    })
+    public String allConfig(Integer id){
+        return "All config";
+    }
 }
