@@ -5,13 +5,13 @@ spring:
     name: cloud-config-center #注册进eureka的服务名称
   cloud:
     config:
+      label: master #读取的分支
       server:
         git:
           #github上面的仓库名字
           uri: https://github.com/linborris/springcloud-config.git
           search-paths: #搜索的目录
             - springcloud-config
-      label: master #读取的分支
   #rabbitmq相关配置
   rabbitmq:
     host: 127.0.0.1
@@ -33,3 +33,4 @@ management:
         #curl -X POST "http://localhost:3344/actuator/bus-refresh" 总线刷新，一次请求处处生效
         #curl -X POST "http://localhost:3344/actuator/bus-refresh/config-client:3355" 针对性刷新
         #curl -X POST "http://localhost:3344/actuator/bus-refresh/config-client:{3355,3366}"
+        #curl -X POST "http://localhost:3355/actuator/refresh" 运维手动激活
