@@ -25,8 +25,13 @@ spring:
     username: root
     password: root
     url: jdbc:mysql://49.233.204.165:3306/db2020?useUnicode=true&characterEncoding=utf-8&useSSL=false
+  zipkin:
+    base-url: http://localhost:9411
+  sleuth:
+    sampler:
+#      采样率值，介于0-1之间。1表示全部采集
+      probability: 1
 
 mybatis:
   mapper-locations: classpath:mapper/*.xml
   type-aliases-package: com.atguigu.springcloud.entities
-
